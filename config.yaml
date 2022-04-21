@@ -42,6 +42,14 @@ actions:
     icon: '&#x1F6CF'
     shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/${USER}/lights/5/state'
 
+  - title: 'Office Lamp: ON'
+    icon: '&#x1F6CF'
+    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/${USER}/lights/9/state'
+
+  - title: 'Office Lamp: OFF'
+    icon: '&#x1F6CF'
+    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/${USER}/lights/9/state'
+
   - title: 'Change Lamp Brightness'
     icon: '&#x1F3E0'
     shell: curl -XPUT -k -d '{"on"':' true, "bri"':' {{ brightness }}}' 'https://192.168.0.141/api/${USER}/lights/{{ light }}/state'
