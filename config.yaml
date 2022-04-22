@@ -8,51 +8,53 @@ listenAddressSingleHTTPFrontend: 0.0.0.0:1337
 # Choose from INFO (default), WARN and DEBUG
 logLevel: 'INFO'
 
+showNavigation: false
+
 # Actions (buttons) to show up on the WebUI:
 actions:
   - title: 'Futon Lamp: ON'
     icon: '&#x1FA91'
-    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/${USER}/lights/8/state'
+    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/USER/lights/8/state'
 
   - title: 'Futon : OFF'
     icon: '&#x1FA91'
-    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/${USER}/lights/8/state'
+    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/USER/lights/8/state'
 
   - title: 'Living Room: ON'
     icon: '&#x1F6CB'
-    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/${USER}/groups/1/action'
+    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/USER/groups/1/action'
 
   - title: 'Living Room: OFF'
     icon: '&#x1F6CB'
-    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/${USER}/groups/1/action'
+    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/USER/groups/1/action'
 
   - title: 'Floor Lamp: ON'
     icon: '&#x1F4A1'
-    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/${USER}/lights/7/state'
+    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/USER/lights/7/state'
 
   - title: 'Floor Lamp: OFF'
     icon: '&#x1F4A1'
-    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/${USER}/lights/7/state'
+    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/USER/lights/7/state'
 
   - title: 'M. Bedroom Lamp: ON'
     icon: '&#x1F6CF'
-    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/${USER}/lights/5/state'
+    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/USER/lights/5/state'
 
   - title: 'M. Bedroom Lamp: OFF'
     icon: '&#x1F6CF'
-    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/${USER}/lights/5/state'
+    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/USER/lights/5/state'
 
   - title: 'Office Lamp: ON'
-    icon: '&#x1F6CF'
-    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/${USER}/lights/9/state'
+    icon: '<img src="customIcons/HueIconPack2019/roomsOffice.svg"/>'
+    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/USER/lights/9/state'
 
   - title: 'Office Lamp: OFF'
-    icon: '&#x1F6CF'
-    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/${USER}/lights/9/state'
+    icon: '<img src="customIcons/HueIconPack2019/roomsOffice.svg"/>'
+    shell: curl -XPUT -k -d '{"on"':' false}' 'https://192.168.0.141/api/USER/lights/9/state'
 
   - title: 'Change Lamp Brightness'
     icon: '&#x1F3E0'
-    shell: curl -XPUT -k -d '{"on"':' true, "bri"':' {{ brightness }}}' 'https://192.168.0.141/api/${USER}/lights/{{ light }}/state'
+    shell: curl -XPUT -k -d '{"on"':' true, "bri"':' {{ brightness }}}' 'https://192.168.0.141/api/USER/lights/{{ light }}/state'
     arguments:
       - name: light
         choices:
