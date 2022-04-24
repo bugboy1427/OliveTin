@@ -8,3 +8,5 @@ sed -i "s/USER/$user/g" /etc/OliveTin/config.yaml
 cat /etc/OliveTin/config.yaml
 
 systemctl restart OliveTin
+
+systemctl status OliveTin
