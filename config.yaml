@@ -39,7 +39,7 @@ actions:
 
   - title: 'M. Bedroom Lamp: ON'
     icon: '&#x1F6CF'
-    shell: curl -XPUT -k -d '{"on"':' true}' 'https://192.168.0.141/api/USER/lights/5/state'
+    shell: curl -XPUT -k -d '{"on"':' true, "bri"':' 64}' 'https://192.168.0.141/api/USER/lights/5/state'
 
   - title: 'M. Bedroom Lamp: OFF'
     icon: '&#x1F6CF'
@@ -67,6 +67,9 @@ actions:
 
           - title: Futon Lamp
             value: 8
+            
+          - title: Office
+            value: 9
       - name: brightness
         choices:
           - title: 100%
