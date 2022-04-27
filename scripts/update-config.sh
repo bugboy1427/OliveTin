@@ -1,4 +1,6 @@
 #!/bin/sh
+cd $(dirname $0)
+
 user=$(cat ../hue-user)
 
 cp ../config.yaml /etc/OliveTin/config.yaml
